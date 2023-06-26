@@ -47,7 +47,13 @@ function login() {
             "Bienvenido " + USUARIO_1 + "<br>" +
             "Edad: " + usuarioEdadIngresada + "<br>" +
             "Email: " + usuarioEmailIngresado + "<br>" +
-            "DNI: " + usuarioDniIngresado;
+            "DNI: " + usuarioDniIngresado + "<br>";
+        
+        if (usuarioEdadIngresada >= 18) {
+            mensaje += "Usted es mayor de edad."
+        } else {
+            mensaje += "Usted es menor de edad."
+        }
         
         pBienVenido.innerHTML= mensaje;
         modificarPagina(TIPO_FUENTE,COLOR_TXT_1,IMG_2);
